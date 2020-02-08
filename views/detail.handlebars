@@ -1,0 +1,77 @@
+<header class="deep">
+
+</header>
+<section class="row" style="align-items: center;">
+    <section id="general-information" class="small-12 medium-8 columns row">
+        <aside id="main-img" class="small-5 medium-4 columns left">
+            <figure>
+                <img src="{{body.image.medium}}" alt="{{body.name}}">
+            </figure>
+
+        </aside>
+
+        <article>
+            {{{body.summary}}}
+        </article>
+
+    </section>
+
+    <!-- show info block right -->
+    <section class="small-12 medium-4 columns">
+        <section id="general-info-panel" class="callout">
+
+            <h2>Show Info</h2>
+
+            <div>
+                <strong>id</strong> {{body.id}}
+            </div>
+            <div>
+                <strong>Url</strong> {{body.url}}
+            </div>
+            <div>
+                <strong>Name</strong> {{body.name}}
+            </div>
+            <div>
+                <strong>Type</strong> {{body.type}}
+            </div>
+            <div>
+                <strong>Langauge</strong> {{body.language}}
+            </div>
+            <div>
+                <strong>Genres:</strong>
+
+                <span class="divider">
+                    {{#each body.genres}}
+                    <span>{{this}}</span>
+                    {{/each}}
+
+                </span>
+            </div>
+            <div>
+                <strong>Status:</strong>
+                {{body.status}}
+            </div>
+
+
+            <div>
+                <strong>Schedule:</strong>
+                <span class="divider">
+
+                    <span>{{body.schedule.days}}</span>
+                    <span>{{body.schedule.time}}</span>
+
+                </span>
+            </div>
+            <div>
+                <strong>Rating:</strong>
+                {{body.rating.average}}
+            </div>
+
+
+
+
+
+
+        </section>
+    </section>
+</section>

@@ -1,0 +1,36 @@
+<header class="head1" id="site-header" style="height: 300px;" style="bg-color: white ;">
+    <h1 style="position: relative; text-align: center">Deeps version of tv show website</h1>
+    <div id="search" class="small-12 medium-6 large-7 columns small-order-2 medium-order-1 hide-for-print">
+        <form class="deepform" method="post" action="/tvapi/shows/search">
+            <div class="row collapse" style="position: relative;" style="margin-left:20px;">
+                <div class="small-8 columns">
+                    <input type="text" id="searchform-q" name="q" placeholder="Search Shows"> </div>
+                <div class="small-4 columns">
+                    <button type="submit" class="medium button postfix" style="width: 100%;" alt="Search">
+                        <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</header>
+
+<div class="wrapper">
+    {{#each body}}
+    {{!-- <div class="box a">{{this.name}}</div> --}}
+    <div class="card primary grid-x" style="background-color: rgb(207, 74, 74)">
+        <figure class="image small-12 cell">
+            <a href="http://localhost:3000/tvapi/shows/{{this.id}}"><img src="{{this.image.medium}}"
+                    alt="{{this.name}}"></a>
+        </figure>
+
+
+        <div class="content auto cell">
+            <span class="title">
+                <h2><a href="http://localhost:3000/tvapi/shows/{{this.id}}">{{this.name}}</a></h2>
+            </span>
+        </div>
+    </div>
+    {{/each}}
+
+</div>

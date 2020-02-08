@@ -1,0 +1,19 @@
+<div class="wrapper">
+    {{#each body}}
+    {{!-- <div class="box a">{{this.name}}</div> --}}
+    <div class="card primary grid-x" style="background-color: rgb(207, 74, 74)">
+        <figure class="image small-12 cell">
+            <a href="http://localhost:3000/tvapi/shows/{{this.show.id}}"><img src="{{this.show.image.medium}}"
+                    alt="{{this.name}}"></a>
+        </figure>
+
+
+        <div class="content auto cell">
+            <span class="title">
+                <h2><a href="http://localhost:3000/tvapi/shows/{{this.show.id}}">{{this.show.name}}</a></h2>
+            </span>
+        </div>
+    </div>
+    {{/each}}
+
+</div>
